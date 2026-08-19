@@ -2,8 +2,6 @@
 """
 AEDT Model Path Re-mapper  (IronPython / run from AEDT: Automation > Run Script)
 ===========================================================================
-此工具由虎門科技資深技術工程師 Jeff Hong 洪敬傑提供
-===========================================================================
 What it does
   1. Scans an AEDT project (.aedt) for every referenced model file
      (.sNp, .ibs, .cir, .sp, .spice, .mod, .ami, .dll, .so, .pwl, .tab, .csv ...).
@@ -138,13 +136,6 @@ class RemapForm(Form):
         self.log.ScrollBars = ScrollBars.Vertical
         self.log.Anchor = (AnchorStyles.Top |
                            AnchorStyles.Left | AnchorStyles.Right)
-
-        # 署名（中文使用微軟正黑體）
-        credit = Label(Text=u"此工具由虎門科技資深技術工程師 Jeff Hong 洪敬傑提供",
-                       Parent=bottom, Location=Point(10, 150), Size=Size(1000, 18))
-        credit.Font = Font("Microsoft JhengHei", 8.25)
-        credit.ForeColor = Color.FromArgb(107, 118, 134)
-        credit.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right
 
         # ---- center: grid ----
         self.grid = DataGridView()
